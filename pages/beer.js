@@ -1,3 +1,4 @@
+import 'tailwindcss/tailwind.css';
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react"
@@ -32,7 +33,7 @@ const Analyze = () => {
             </Head>
             <main className={styles.main}>
                 <h1 className={styles.title}>Beers</h1>
-                <img src="http://192.168.1.21/jpg" alt="image" id="image"/>
+                <img src={process.env.CAM_IP} alt="image" id="image"/>
                 <p>Number of opened: {opened == -1 ? "LOADING" : opened}. Number of closed: {closed == -1 ? "LOADING" : closed}.</p>
             </main>
 
