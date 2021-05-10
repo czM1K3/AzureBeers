@@ -12,7 +12,7 @@ const Navbar: FC<navbarProps> = ({ page }) => {
               <div className="flex-shrink-0">
                 <Link href="/">
                   <img
-                    className="h-8 w-8"
+                    className="h-8 w-8 cursor-pointer"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
@@ -26,7 +26,7 @@ const Navbar: FC<navbarProps> = ({ page }) => {
                         page === "index"
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                      }  px-3 py-2 rounded-md text-sm font-medium`}>
+                      }  px-3 py-2 rounded-md text-sm font-medium cursor-pointer`}>
                       Welcome
                     </div>
                   </Link>
@@ -37,7 +37,7 @@ const Navbar: FC<navbarProps> = ({ page }) => {
                         page === "beers"
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                      }  px-3 py-2 rounded-md text-sm font-medium`}>
+                      }  px-3 py-2 rounded-md text-sm font-medium cursor-pointer`}>
                       Beers
                     </div>
                   </Link>
@@ -48,7 +48,7 @@ const Navbar: FC<navbarProps> = ({ page }) => {
                         page === "about"
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                      }  px-3 py-2 rounded-md text-sm font-medium`}>
+                      }  px-3 py-2 rounded-md text-sm font-medium cursor-pointer`}>
                       About
                     </div>
                   </Link>
@@ -118,23 +118,38 @@ const Navbar: FC<navbarProps> = ({ page }) => {
 
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
-              className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">
-              Welcome
-            </a>
+            <Link href="/">
+              <div
+                className={`${
+                  page === "index"
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                }  block px-3 py-2 rounded-md text-base font-medium cursor-pointer`}>
+                Welcome
+              </div>
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              Beers
-            </a>
+            <Link href="/beer">
+              <div
+                className={`${
+                  page === "beers"
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                }  block px-3 py-2 rounded-md text-base font-medium cursor-pointer`}>
+                Beers
+              </div>
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              About
-            </a>
+            <Link href="/about">
+              <div
+                className={`${
+                  page === "about"
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                }  block px-3 py-2 rounded-md text-base font-medium cursor-pointer`}>
+                About
+              </div>
+            </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-700">
             <div className="flex items-center px-5">
