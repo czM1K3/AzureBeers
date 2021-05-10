@@ -5,6 +5,9 @@ module.exports = {
     extend: {
           colors:{
             beer: '#FFB701',
+          },
+          height: {
+            banner: '10vh',
           }
     },
   },
