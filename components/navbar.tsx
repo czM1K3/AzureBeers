@@ -12,8 +12,8 @@ const Navbar: FC<navbarProps> = ({ page }) => {
               <div className="flex-shrink-0">
                 <Link href="/">
                   <img
-                    className="h-8 w-8 cursor-pointer"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    className="h-16 w-16 cursor-pointer"
+                    src="/logo.png"
                     alt="Workflow"
                   />
                 </Link>
