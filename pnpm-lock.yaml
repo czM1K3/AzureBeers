@@ -8,6 +8,7 @@ specifiers:
   next: 10.2.0
   postcss: ^8.2.14
   react: 17.0.2
+  react-countup: ^4.3.3
   react-dom: 17.0.2
   tailwindcss: ^2.1.2
   typescript: ^4.2.4
@@ -16,6 +17,7 @@ dependencies:
   '@microsoft/customvision-tfjs-node': 1.1.0
   next: 10.2.0_507781d099a67956587e23f5ac79078b
   react: 17.0.2
+  react-countup: 4.3.3_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
 
 devDependencies:
@@ -778,6 +780,10 @@ packages:
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
+    dev: false
+
+  /countup.js/1.9.3:
+    resolution: {integrity: sha1-zj5QzXFgRB5HjwfaMYle3MDxyd0=}
     dev: false
 
   /create-ecdh/4.0.4:
@@ -2227,6 +2233,17 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
 
+  /react-countup/4.3.3_react@17.0.2:
+    resolution: {integrity: sha512-pWnxpwdPNRyJFha/YKKbyc4RLAw8PzmULdgCziGIgw6vxhT1VdccrvQgj38HBSoM2qF/MoLmn4M2klvDWVIdaw==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      countup.js: 1.9.3
+      prop-types: 15.7.2
+      react: 17.0.2
+      warning: 4.0.3
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -2765,6 +2782,12 @@ packages:
 
   /vm-browserify/1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
+    dev: false
+
+  /warning/4.0.3:
+    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /watchpack/2.1.1:

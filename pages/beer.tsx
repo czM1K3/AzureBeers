@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import { useState, useEffect } from "react";
+import CountUp from "react-countup";
 
 const limit = 0.1;
 
@@ -43,12 +44,32 @@ const Analyze = () => {
           <h2 className="font-semibold text-gray-900 float-right py-2">
             Number of opened:{" "}
             <span className="text-beer font-bold">
-              {opened == -1 ? "LOADING" : opened}
+              {opened == -1 ? (
+                "LOADING"
+              ) : (
+                <CountUp
+                  start={0}
+                  end={opened}
+                  duration={1}
+                  separator=" "
+                  decimals={0}
+                />
+              )}
             </span>
             <br />
             Number of closed:{" "}
             <span className="text-beer font-bold">
-              {closed == -1 ? "LOADING" : closed}
+              {closed == -1 ? (
+                "LOADING"
+              ) : (
+                <CountUp
+                  start={0}
+                  end={closed}
+                  duration={1}
+                  separator=" "
+                  decimals={0}
+                />
+              )}
             </span>
           </h2>
         </div>
