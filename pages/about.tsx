@@ -7,7 +7,7 @@ const About = () => {
       <Head>
         <title>Azure beers</title>
         <meta name="description" content="ai-powered beer counting" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <Navbar page="about" />
