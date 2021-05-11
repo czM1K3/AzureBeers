@@ -8,7 +8,7 @@ export default async(req, res) => {
     if (response) {
         const buffer = await response.buffer();
         const result = await model.executeAsync(buffer);
-        // console.log(result);
+        console.log(result);
         res.status(200).json(result);
         return;
     }

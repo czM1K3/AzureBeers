@@ -129,7 +129,7 @@ const Navbar: FC<navbarProps> = ({ page }) => {
               </div>
             </Link>
 
-            <Link href="/beer">
+            <Link href="/beer" prefetch={false}>
               <div
                 className={`${
                   page === "beers"

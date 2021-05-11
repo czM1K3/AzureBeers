@@ -26,7 +26,7 @@ const Analyze = () => {
     setOpened(currentOpened);
     setClosed(currentClosed);
     console.log(fetched);
-  });
+  }, []);
 
   return (
     <>
