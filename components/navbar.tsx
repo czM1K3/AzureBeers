@@ -1,4 +1,4 @@
-import { FC } from "React";
+import { FC } from "react";
 import Link from "next/link";
 
 type navbarProps = { page: string };
