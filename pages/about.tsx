@@ -1,7 +1,8 @@
+import { FC } from "react";
 import Head from "next/head";
 import Navbar from "../components/navbar";
 
-const About = () => {
+const About: FC = () => {
   return (
     <>
       <Head>

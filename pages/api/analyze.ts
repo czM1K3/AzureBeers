@@ -1,16 +1,14 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { NextApiResponse, NextApiRequest } from "next";
 const cvstfjs = require('@microsoft/customvision-tfjs-node');
 
-export default async(req, res) => {
+export default async(_req: NextApiRequest, res: NextApiResponse) => {
     const model = new cvstfjs.ObjectDetectionModel();
     await model.loadModelAsync('file://customvision/model.json');
     const response = await fetch(process.env.CAM_IP).then(x => x).catch(() => null);
     if (response) {
         const buffer = await response.buffer();
-        const result = await model.executeAsync(buffer);
-        console.log(result);
+        const result = {image: buffer, result: await model.executeAsync(buffer)};
         res.status(200).json(result);
-        return;
     }
-    res.status(200).json(null);
+    else res.status(200).json(null);
 }
