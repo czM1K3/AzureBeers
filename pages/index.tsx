@@ -1,18 +1,9 @@
 import { FC } from "react";
-import Head from "next/head";
-import Navbar from "../components/navbar";
+
 
 const Home: FC = () => {
   return (
     <>
-      <Head>
-        <title>Azure beers</title>
-        <meta name="description" content="ai-powered beer counting" />
-        <link rel="icon" href="/logo.png" />
-      </Head>
-
-      <Navbar page="index" />
-
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900">Welcome</h1>
@@ -27,3 +18,11 @@ const Home: FC = () => {
   );
 };
 export default Home;
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      page: "index"
+    }
+  }
+}
