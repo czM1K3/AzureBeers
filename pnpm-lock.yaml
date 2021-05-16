@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@headlessui/react': ^1.2.0
   '@microsoft/customvision-tfjs-node': ^1.1.0
   '@types/node': ^15.0.2
   '@types/react': ^17.0.5
@@ -15,6 +16,7 @@ specifiers:
   typescript: ^4.2.4
 
 dependencies:
+  '@headlessui/react': 1.2.0_react@17.0.2
   '@microsoft/customvision-tfjs-node': 1.1.0
   next: 10.2.0_507781d099a67956587e23f5ac79078b
   react: 17.0.2
@@ -91,6 +93,15 @@ packages:
 
   /@hapi/hoek/9.2.0:
     resolution: {integrity: sha512-sqKVVVOe5ivCaXDWivIJYVSaEgdQK9ul7a4Kity5Iw7u9+wBAPbX1RMSnLLmp7O4Vzj0WOWwMAJsTL00xwaNug==}
+    dev: false
+
+  /@headlessui/react/1.2.0_react@17.0.2:
+    resolution: {integrity: sha512-19DkLz8gDgbi+WvkoTzi9vs0NK9TJf94vbYhMzB4LYJo03Kili0gmvXT9CiKZoxXZ7YAvy/b1U1oQKEnjWrqxw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /@microsoft/customvision-tfjs-node/1.1.0:

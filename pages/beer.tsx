@@ -61,9 +61,9 @@ const Analyze: FC = () => {
             </h1>
           </div>
         </header>
-        <main>
+        <main className="absolute inset-y-1/2 w-full">
           <ReactLoading
-            className="absolute inset-1/2"
+            className="m-auto "
             type="spinningBubbles"
             color="#1F2937"
           />
@@ -129,7 +129,12 @@ const Analyze: FC = () => {
       </header>
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <img src={img ?? "/logo.png"} alt="image" id="image" />
+          <img
+            src={img ?? "/logo.png"}
+            alt="image"
+            id="image"
+            className="m-auto rounded "
+          />
         </div>
       </main>
     </>
