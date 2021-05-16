@@ -7,11 +7,11 @@ const limit = 0.1;
 
 type Analyzed = {
   image: {
-    type: string
-    data: number[]
-  },
-  result: number[][]
-}
+    type: string;
+    data: number[];
+  };
+  result: number[][];
+};
 
 const Analyze: FC = () => {
   const [opened, setOpened] = useState(-1);
@@ -20,16 +20,20 @@ const Analyze: FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-
   // @ts-ignore
   useEffect(async () => {
-    const fetched = await (await fetch("/api/analyze").catch(null)).json(
+    const fetched = await (
+      await fetch("/api/analyze").catch(null)
+    ).json(
       // @ts-ignore
       (x: Analyzed) => x
     );
     if (fetched) {
       // @ts-ignore
-      setImg("data:image/jpeg;base64," + btoa(String.fromCharCode(...new Uint8Array(fetched.image.data))));
+      setImg(
+        "data:image/jpeg;base64," +
+          btoa(String.fromCharCode(...new Uint8Array(fetched.image.data)))
+      );
 
       let currentOpened = 0,
         currentClosed = 0;
@@ -42,41 +46,46 @@ const Analyze: FC = () => {
       setOpened(currentOpened);
       setClosed(currentClosed);
       setLoading(false);
-    }
-    else {
+    } else {
       setError(true);
     }
   }, []);
 
-  if (loading) return (
-    <>
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 flex justify-between">
-          <h1 className="text-3xl font-bold text-gray-900 float-left py-4">
-            Beers
-          </h1>          
-        </div>
-      </header>
-      <main>
-          <ReactLoading type="bubbles" color="#1F2937" height={'50%'} width={'50%'} />
-      </main>
-    </>
-  )
+  if (loading)
+    return (
+      <>
+        <header className="bg-white shadow">
+          <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 flex justify-between">
+            <h1 className="text-3xl font-bold text-gray-900 float-left py-4">
+              Beers
+            </h1>
+          </div>
+        </header>
+        <main>
+          <ReactLoading
+            className="absolute inset-1/2"
+            type="spinningBubbles"
+            color="#1F2937"
+          />
+        </main>
+      </>
+    );
 
-  if (error) return (
-    <>
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 flex justify-between">
-          <h1 className="text-3xl font-bold text-gray-900 float-left py-4">
-            Beers
-          </h1>          
-        </div>
-      </header>
-      <main>
+  if (error)
+    return (
+      <>
+        <header className="bg-white shadow">
+          <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 flex justify-between">
+            <h1 className="text-3xl font-bold text-gray-900 float-left py-4">
+              Beers
+            </h1>
+          </div>
+        </header>
+        <main>
           <h2>Error</h2>
-      </main>
-    </>
-  )
+        </main>
+      </>
+    );
 
   return (
     <>
@@ -131,7 +140,7 @@ export default Analyze;
 export const getStaticProps = async () => {
   return {
     props: {
-      page: "beers"
-    }
-  }
-}
+      page: "beers",
+    },
+  };
+};
