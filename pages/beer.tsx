@@ -95,7 +95,7 @@ const Analyze: FC = () => {
             Beers
           </h1>
           <h2 className="font-semibold text-gray-900 float-right py-2">
-            Number of opened:{" "}
+            Opened beers:{" "}
             <span className="text-beer font-bold">
               {opened == -1 ? (
                 "0"
@@ -110,8 +110,12 @@ const Analyze: FC = () => {
               )}
             </span>
             <br />
-            Number of closed:{" "}
-            <span className="text-beer font-bold">
+            Fresh beers:{" "}
+            <span
+              className={`${
+                closed < 4 ? "text-red-400" : "text-green-400"
+              } font-bold`}
+            >
               {closed == -1 ? (
                 "0"
               ) : (
