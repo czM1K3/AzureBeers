@@ -29,9 +29,9 @@ const Analyze: FC = () => {
       (x: Analyzed) => x
     );
     if (fetched) {
-      // @ts-ignore
       setImg(
         "data:image/jpeg;base64," +
+          //@ts-ignore
           btoa(String.fromCharCode(...new Uint8Array(fetched.image.data)))
       );
 
