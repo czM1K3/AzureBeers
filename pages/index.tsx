@@ -84,11 +84,11 @@ const Home: FC<HomeProps> = ({limit}) => {
 };
 export default Home;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   return {
     props: {
       page: "index",
-      limit: process.env.LIMIT
+      limit: parseFloat(process.env.LIMIT ?? "0.5")
     },
   };
 };

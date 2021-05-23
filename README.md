@@ -1,6 +1,14 @@
 # Azure beers 🍻
 
-## Setup:
+## Build:
+1. ```bash
+   docker build . -t azurebeers
+   ```
+2. ```bash
+   docker run -p 3000:3000 -e CAM_IP=http://madhome.cf/beers.jpeg -e LIMIT=0.1 azurebeers
+   ```
+
+## Development:
 
 1. rename `.env.local.example` to `.env.local` and customize values
 

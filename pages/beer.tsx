@@ -148,10 +148,11 @@ const Analyze: FC<AnalyzeProps> = ({limit}) => {
 };
 export default Analyze;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   return {
     props: {
       page: "beers",
+      limit: parseFloat(process.env.LIMIT ?? "0.5")
     },
   };
 };
