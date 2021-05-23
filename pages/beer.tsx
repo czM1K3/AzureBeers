@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import ReactLoading from "react-loading";
 
-const limit = 0.1;
-
 type Analyzed = {
   image: {
     type: string;
@@ -13,7 +11,11 @@ type Analyzed = {
   result: number[][];
 };
 
-const Analyze: FC = () => {
+type AnalyzeProps = {
+  limit: number
+}
+
+const Analyze: FC<AnalyzeProps> = ({limit}) => {
   const [opened, setOpened] = useState(-1);
   const [closed, setClosed] = useState(-1);
   const [img, setImg] = useState(null);

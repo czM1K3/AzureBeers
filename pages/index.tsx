@@ -1,8 +1,6 @@
 import { FC } from "react";
 import { useState, useEffect } from "react";
 
-const limit = 0.1;
-
 type Analyzed = {
   image: {
     type: string;
@@ -11,7 +9,11 @@ type Analyzed = {
   result: number[][];
 };
 
-const Home: FC = () => {
+type HomeProps = {
+    limit: number
+}
+
+const Home: FC<HomeProps> = ({limit}) => {
   const [opened, setOpened] = useState(-1);
   const [closed, setClosed] = useState(-1);
   const [img, setImg] = useState(null);
@@ -86,6 +88,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       page: "index",
+      limit: process.env.LIMIT
     },
   };
 };
