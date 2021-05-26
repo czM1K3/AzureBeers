@@ -1,9 +1,12 @@
 import { NextApiResponse, NextApiRequest } from "next";
 const cvstfjs = require('@microsoft/customvision-tfjs-node');
+const model = new cvstfjs.ObjectDetectionModel();
+const loadModel = async () => {
+    await model.loadModelAsync('file://customvision/model.json');
+}
+loadModel();
 
 export default async(_req: NextApiRequest, res: NextApiResponse) => {
-    const model = new cvstfjs.ObjectDetectionModel();
-    await model.loadModelAsync('file://customvision/model.json');
     const response = await fetch(process.env.CAM_IP).then(x => x).catch(() => null);
     if (response) {
         const buffer = await response.buffer();
