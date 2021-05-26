@@ -91,7 +91,7 @@ const Home: FC<HomeProps> = ({limit}) => {
       </header>
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          You have {opened} fresh beers and {closed} fresh beers
+          You have {opened} opened beers and {closed} fresh beers
           <br />
           {closed < 2 ? (
             <span className="text-red-400 font-bold">
