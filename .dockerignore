@@ -4,3 +4,4 @@ LICENSE
 .env.local.example
 .env.local
 README.md
+Dockerfile
