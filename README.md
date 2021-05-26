@@ -37,6 +37,6 @@ Yap, this is a question we all ask... It will be here as soon as we know!
 &nbsp;
 ## Todo:
 
-- [ ] welcome page
+- [x] welcome page
 - [x] about page
 - [x] navbar
