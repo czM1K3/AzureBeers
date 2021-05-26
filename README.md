@@ -1,5 +1,15 @@
 # Azure beers 🍻
 
+## Production
+1. install docker
+2. ```bash
+   docker run -p 3000:3000 -e CAM_IP=https://example.com/beers.jpg -e LIMIT=0.5 --restart always -d --memory 500m --memory-swap 500m czm1k3/azurebeers
+   ```
+   or
+   ```bash
+   docker run -p 3000:3000 -e CAM_IP=https://example.com/beers.jpg -e LIMIT=0.5 --restart always -d --memory 500m --memory-swap 500m docker.pkg.github.com/czm1k3/azurebeers/beers
+   ```
+
 ## Build:
 1. ```bash
    docker build . -t azurebeers
