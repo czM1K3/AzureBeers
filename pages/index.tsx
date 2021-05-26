@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useState, useEffect } from "react";
+import ReactLoading from "react-loading";
 
 type Analyzed = {
   image: {
@@ -51,11 +52,41 @@ const Home: FC<HomeProps> = ({limit}) => {
     }
   }, []);
 
+  if (loading) return (
+    <>
+      <header className="bg-white shadow">
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-gray-900">Quick status</h1>
+        </div>
+      </header>
+      <main className="absolute inset-y-1/2 w-full">
+        <ReactLoading
+          className="m-auto "
+          type="spinningBubbles"
+          color="#1F2937"
+        />
+      </main>
+    </>
+  )
+
+  if (error) return (
+    <>
+      <header className="bg-white shadow">
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-gray-900">Quick status</h1>
+        </div>
+      </header>
+      <main>
+        <h2>Error</h2>
+      </main>
+    </>
+  );
+
   return (
     <>
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Welcome</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Quick status</h1>
         </div>
       </header>
       <main>
@@ -87,7 +118,7 @@ export default Home;
 export const getServerSideProps = async () => {
   return {
     props: {
-      page: "index",
+      page: "status",
       limit: parseFloat(process.env.LIMIT ?? "0.5")
     },
   };
