@@ -34,14 +34,20 @@
 ## About:
 
 ### **How it all began?**
-This project was born out of a love of beer. We love the well-brewed beer. But the thing is, when all pubs were closed in March 2020, there was no opportunity to enjoy the draft beer in the local pub. Because of this, We moved our regular Friday talks on to the Microsoft Teams.
-
-From the beginning, It was tough, but after few meetings, we've got used to it. One of the issues and probably the toughest we've faced was the risk of not having the beer at home. The problem with drinking beer at home is that You might lose track of how much You have at home and forget to buy some. It doesn't have the same feeling when you talk with guys and drink orange juice instead of beer.
-
-And there, finally, comes our solution. Azure Beers will keep track of how many bottles of beer you currently have at home. No more unexpected surprises of only empty bottles... With Azure Beers, You can take a look have many bottles do You have and even get notified when You are running out of beer!
+The story of starting this project isn't something exciting, we have no fairy tale as the background of doing this particular thing. We all love to learn and discuss new technologies and there is no better drink like a beer for these long talks over all the stuff that is happening in tech. So this project is a kind of mixture combining both tech and beer. For Us, this project was a great but also fun way to learn how to use all the Cloud and Machine Learning tools, which may be useful knowledge for our future projects.
 
 ### **What is the goal?**
-Yap, this is a question we all ask... It will be here as soon as we know!
+That is a great question! It may look like it's just a weird mistake, a project that has no sense in making and developing. 
+We don't live in illusion, this won't be the next Nobel prize thing... It's more like a maker project.
+
+The reason for our effort is, that AI is most of the time shown as something complex, something that is meant only for nerds and experts. 
+We want to change that view, new technologies, which AI definitely is, are super exciting. 
+But applications like self-driving cars or data analysis are for most people too distant topics. 
+We believe that AI is excellent to be used in highly complex cases as well as in some small and fun hobby projects.
+
+With AzureBeers, we want to show off that AI isn't a thing for a few chosen, it's a tool that could be used for a wide variety of purposes, 
+that anyone could benefit out of it and Our ultimate goal would be if it will help anyone, even a single person, 
+to get more used to working with AI and get comfortable about this another industrial revolution tool.
 \
 \
 &nbsp;
@@ -50,3 +56,4 @@ Yap, this is a question we all ask... It will be here as soon as we know!
 - [x] welcome page
 - [x] about page
 - [x] navbar
+- [x] drink a few beers during development
