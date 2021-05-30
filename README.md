@@ -15,19 +15,34 @@
    docker build . -t azurebeers
    ```
 2. ```bash
-   docker run -p 3000:3000 -e CAM_IP=http://madhome.cf/beers.jpeg -e LIMIT=0.1 azurebeers
+   docker run -p 3000:3000 -e CAM_IP=https://example.com/beers.jpg -e LIMIT=0.5 azurebeers
    ```
 
 ## Development:
 
-1. rename `.env.local.example` to `.env.local` and customize values
+1. Install C++ development kit (required by TensorFlowJS)
 
-2. ```bash
+   Debian/Ubuntu:
+   ```bash
+   sudo apt install build-essential
+   ```
+   Arch/Manjaro
+   ```bash
+   sudo pacman -S base-devel
+   ```
+
+2. Rename `.env.local.example` to `.env.local` and insert your values
+
+3. Install dependencies
+   ```bash
    pnpm install
+   ```
+4. Run dev
+   ```bash
    pnpm dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000)
+5. Open [http://localhost:3000](http://localhost:3000)
 \
 \
 &nbsp;
