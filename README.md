@@ -1,8 +1,14 @@
 # Azure beers 🍻
 
+## Requirements
+1. Amd64 Linux server with Docker installed (we recommend Debian or RHEL based system). In our example we use Ubuntu 20.04 on Azure (we used B1s for 7.39€/month).
+1. You will need some kind of IP camera that is visible to your server (you can use public IP, Cloudflare Tunnels or VPN). We have used ESP32-CAM with [this](https://github.com/czM1K3/esp32-cam-mjpeg-multiclient) code.
+1. Optionally you can use a domain or if you use Azure you can use their domain.
+1. Optionally you can use some kind of reverse proxy (we used Nginx) and put SSL or password over it.
+
 ## Production
 1. install docker
-2. ```bash
+1. ```bash
    docker run -p 3000:3000 -e CAM_IP=https://example.com/beers.jpg -e LIMIT=0.5 --restart always -d --memory 500m --memory-swap 500m czm1k3/azurebeers
    ```
    or
@@ -14,7 +20,7 @@
 1. ```bash
    docker build . -t azurebeers
    ```
-2. ```bash
+1. ```bash
    docker run -p 3000:3000 -e CAM_IP=http://madhome.cf/beers.jpeg -e LIMIT=0.1 azurebeers
    ```
 
@@ -22,12 +28,12 @@
 
 1. rename `.env.local.example` to `.env.local` and customize values
 
-2. ```bash
+1. ```bash
    pnpm install
    pnpm dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000)
+1. Open [http://localhost:3000](http://localhost:3000)
 \
 \
 &nbsp;
