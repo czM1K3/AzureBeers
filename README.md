@@ -41,11 +41,11 @@
 
 3. Install dependencies
    ```bash
-   pnpm install
+   yarn install
    ```
 4. Run dev
    ```bash
-   pnpm dev
+   yarn dev
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000)
@@ -72,9 +72,3 @@ to get more used to working with AI and get comfortable about this another indus
 \
 \
 &nbsp;
-## Todo:
-
-- [x] welcome page
-- [x] about page
-- [x] navbar
-- [x] drink a few beers during development
